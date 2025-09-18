@@ -22,14 +22,6 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin123'),
             'email_verified_at' => now(),
             'estado' => 'Activo',
-            'verified' => true,
-        ]);
-
-        // Crear detalles del administrador
-        UserDetail::create([
-            'user_id' => $admin->id,
-            'phone' => '1234567890',
-            'role' => 'admin',
         ]);
 
         // Verificar si ya existen tipos de camión para no duplicar
